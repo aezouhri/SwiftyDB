@@ -1,0 +1,6 @@
+credentials.txt
+config.py
+**/__pycache__
+**/.idea
+**/.cache
+**/.DS_Store

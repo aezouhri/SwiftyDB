@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <!-- Database Song Search Section -->
+    <div id="database-search-container" class="search-section">
+        <input type="text" id="db-song-search" placeholder="Type a song name..." class="search-input">
+        <input type="text" id="db-artist-search" placeholder="Type an artist name..." class="search-input">
+        <button id="db-search-btn" class="search-btn">Search Database</button>
+    </div>
+
+    <!-- Spotify Song Search Section -->
+    <div id="spotify-search-container" class="search-section">
+        <input type="text" id="spotify-song-search" placeholder="Type a Spotify song name..." class="search-input">
+        <input type="text" id="spotify-artist-search" placeholder="Type a Spotify artist name..." class="search-input">
+        <button id="spotify-search-btn" class="search-btn">Search Spotify</button>
+    </div>
+
+    <!-- Song Selection with Checkboxes for Database Songs -->
+    <div id="db-search-results-container" class="selection-container" style="display:none;">
+        <p>Select songs from Database:</p>
+        <div id="db-search-results">
+            <!-- Checkboxes will be added dynamically -->
+        </div>
+    </div>
+
+    <!-- Song Selection with Checkboxes for Spotify Songs -->
+    <div id="spotify-search-results-container" class="selection-container" style="display:none;">
+        <p>Select songs from Spotify:</p>
+        <div id="spotify-search-results">
+            <!-- Checkboxes will be added dynamically -->
+        </div>
+    </div>
+    <button id="add-spotify-song-btn" class="select-btn">Add to Database</button>
+    <button id="add-to-playlist-btn" class="select-btn">Add to Playlist</button>
+    <button id="get-taylor-swift-recommendations" class="select-btn">Get Taylor Swift Match</button>
+
+    <!-- Playlist Status Message -->
+    <div id="playlist-status" class="status-message"></div>
+
+    <!-- Current Playlist Display -->
+    <div id="playlist-container" class="playlist-container">
+        <h3>Current Playlist</h3>
+        <ul id="playlist"></ul>
+        <button id="get-taylor-swift-playlist-recommendations" class="select-btn">Get Taylor Swift Recommendations</button>
+        <button id="delete-from-playlist-btn" class="select-btn">Delete Selected Songs</button>
+    </div>
+    <div id="taylor-swift-playlist-container"></div>
+        <button id="add-to-playlist-btn" class="select-btn">Add to Playlist</button>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/search_songs.js') }}"></script>
+{% endblock %}

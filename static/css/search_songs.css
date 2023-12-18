@@ -1,0 +1,19 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+#search-container, #spotify-search-container {
+    margin: 20px;
+}
+
+#results-container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#song-list li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
